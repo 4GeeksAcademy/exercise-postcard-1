@@ -1,24 +1,70 @@
 body {
-    background: black;
-}
-* {
-	border: 1px dashed red;
-	min-height: 10px;
-}
-.postcard {
-	width: 400px;
+	background: black;
+  }
+  
+  .postcard {
+	width: 600px;
 	height: 300px;
 	background: white;
 	margin: auto;
-}
-.postcard-header {
 	display: flex;
-}
-.postcard-header h1 {
-	width: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+  }
+  
+  .postcard-header {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+  }
+  
+  .postcard-header h1 {
 	margin: 0;
-}
-.postcard-header img {
-	width: 40px;
-	height: 40px;
-}
+	flex-grow: 1;
+  }
+  
+  .postcard-header img {
+	width: 50px;
+	height: 50px;
+  }
+  
+  .postcard-body {
+	flex-grow: 1;
+	padding: 20px;
+	display: flex;
+	gap: 20px; /* Add this line */
+  }
+  
+  .postcard-body .text {
+	flex-grow: 1;
+  }
+  
+  .postcard-body .text p {
+	margin: 0;
+  }
+  
+  .postcard-body .image {
+	display: flex;
+	justify-content: flex-end;
+  }
+  
+  .postcard-footer {
+	text-align: center;
+	background-color: grey;
+	border-radius: 10px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	;
+  }
+  
